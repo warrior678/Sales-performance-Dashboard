@@ -57,7 +57,7 @@ Visualizations were used to compare sales performance, identify high-performing 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/sales-performance-dashboard.git
+   git clone https://github.com/warrior678/sales-performance-dashboard.git
 
 Open and run SQL queries in SSMS using  sales database.
 
