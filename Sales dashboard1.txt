@@ -1,0 +1,58 @@
+-- Create Database
+CREATE DATABASE sqldb;
+
+-- Use the Database
+USE sqldb;
+
+-- View data from tables
+SELECT * FROM [dbo].[sales (1)];
+SELECT * FROM [dbo].[regions];
+SELECT * FROM [dbo].[customers];
+SELECT * FROM [dbo].[products (3)];
+-- Write a SQL query to find total sales by month
+SELECT 
+  FORMAT(order_date, 'yyyy-MM') AS month,
+  SUM(total_price) AS total_sales
+FROM [dbo].[sales (1)]
+GROUP BY FORMAT(order_date, 'yyyy-MM')
+ORDER BY month;
+
+-- Write a sql query to find top5 Products by Revenue
+SELECT 
+  p.product_name,
+  SUM(s.total_price) AS revenue
+FROM [dbo].[sales (1)] s
+JOIN [dbo].[products (3)] p ON s.product_id = p.product_id
+GROUP BY p.product_name
+ORDER BY revenue DESC
+OFFSET 0 ROWS FETCH NEXT 5 ROWS ONLY;
+
+-- Write a sql query to find sales by region
+
+SELECT 
+  r.region_name,
+  SUM(s.total_price) AS total_sales
+FROM [dbo].[sales (1)] s
+JOIN [dbo].[regions] r ON s.region_id = r.region_id
+GROUP BY r.region_name
+ORDER BY total_sales DESC;
+
+-- write a sql query to find average order value
+SELECT 
+  AVG(total_price) AS avg_order_value
+FROM [dbo].[sales (1)]
+
+-- write a sql query to find total sales by product category
+SELECT 
+  p.category,
+  SUM(s.total_price) AS total_sales
+FROM [dbo].[sales (1)] s
+JOIN [dbo].[products (3)] p ON s.product_id = p.product_id
+GROUP BY p.category
+ORDER BY total_sales DESC;
+
+
+
+
+
+
