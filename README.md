@@ -1,67 +1,77 @@
+
+
 # 📊 Sales Performance Dashboard
 
-This project is a simple yet insightful **Sales Performance Dashboard** built using **Excel** and **SQL Server**. It showcases how to import, analyze, and visualize sales data to derive meaningful business insights.
+This project showcases a comprehensive **Sales Performance Dashboard** created using **SQL (SSMS)** and **Excel**. The aim is to extract insights from raw sales data, perform analysis using SQL queries, and visualize key performance indicators (KPIs) in Excel charts.
 
 ---
 
-## 📁 Project Structure
+## 🧰 Tools Used
 
-- **SQL Queries**: Used to extract key metrics like top-selling products, monthly sales, and category-wise revenue from a sales dataset imported into SQL Server.
-- **Excel Dashboard**: Clean visualizations (line chart, pie chart, bar chart) presenting:
-  - Monthly sales trend
-  - Product-wise and category-wise sales revenue
-  - Average sales
+- **SQL Server Management Studio (SSMS)** – Writing and running SQL queries
+- **Microsoft Excel** – Creating dashboards and visualizations
+- **Git & GitHub** – Version control and collaboration
 
 ---
 
-## 🔧 Tools Used
+## 🗂️ Project Structure
+├── data/
+│ └── sales_data_raw.xlsx # Original raw sales dataset
+├── sql/
+│ └── sales_performance_queries.sql # SQL queries executed in SSMS
+├── dashboard/
+│ └── sales_dashboard.xlsx # Excel dashboard with visualizations
+├── README.md # Project documentation
 
-| Tool           | Purpose                         |
-|----------------|----------------------------------|
-| **SQL Server** | Data extraction and aggregation  |
-| **Excel**      | Data visualization and dashboard |
-| **WPS Office** | Initial data storage (CSV files) |
-
----
-
-## 📈 Key Features
-
-- Top 5 products by revenue
-- Monthly sales trend visualization
-- Sales by product category
-- Clear Excel visuals (line chart, bar chart, pie chart)
-- Clean layout and simple interaction
 
 ---
 
-## 📂 How to Use
+## 🔍 Key Features
 
-1. Clone the repository or download the `.xlsx` file.
-2. Open the Excel dashboard.
-3. Explore charts and interact with the slicers (if added).
-4. Use SQL scripts (optional) to replicate the analysis in your own database.
+### ✅ SQL Analysis (via SSMS)
+Performed multiple analytical queries such as:
+- 📈 **Total Revenue Calculation**
+- 🧮 **Average Sales per Transaction**
+- 🛒 **Sales by Product**
+- 📊 **Monthly Sales Trends**
+- 🌍 **Sales by Region**
 
----
-
-## ✅ Outcomes
-
-This dashboard provides quick insights into sales performance that could help in decision-making for business stakeholders. It is beginner-friendly and a strong showcase for data analysis skills.
-
----
-
-## 💡 Future Enhancements
-
-- Add slicers for region or product filters
-- Connect Excel directly to SQL Server
-- Include Power BI or Python versions for scalability
+> All queries are included and well-commented in `sql/sales_performance_queries.sql`.
 
 ---
 
-## 📬 Contact
+### 📈 Excel Dashboard
 
-**Gautam Kumar**  
-📍  Feel free to check out my [LinkedIn](https://www.linkedin.com/in/gautam-kumar-2935bb178/) 
-📧 gk4137061@gmail.com  
+Created a dynamic and interactive Excel dashboard using the query results. Key charts included:
+
+- 🥧 **Regional Sales** – Pie Chart
+- 📦 **Sales by Product** – Clustered Bar Chart
+- 📅 **Monthly Sales Trends** – Line Chart
+- 💵 **Revenue, Average Sales, Product Sales** – Bar Chart
+
+Visualizations were used to compare sales performance, identify high-performing regions/products, and track sales trends over time.
+
+---
+
+## 🚀 How to Use
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/sales-performance-dashboard.git
+
+Open and run SQL queries in SSMS using  sales database.
+
+Open sales_dashboard.xlsx in Excel to view charts and insights.
+🏆 Top Performing Regions identified using pie chart
+
+📊 Monthly Sales Patterns helped forecast future trends
+
+📈 Revenue Growth visualized over time
+
+
+
+
+
 
 
 ---
